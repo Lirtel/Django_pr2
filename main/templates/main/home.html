@@ -1,0 +1,22 @@
+<!-- main/templates/main/home.html -->
+{% extends "main/base.html" %}
+
+{% block content %}
+    <h1 class="text-center my-5">Добро пожаловать на сайт!</h1>
+    <div class="text-center">
+        <button class="btn btn-primary" onclick="showAlert()">Нажми меня</button>
+    </div>
+
+    <div id="alertMessage" class="alert text-center alert-success mt-3 d-none" role="alert">
+        :)
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function showAlert() {
+        var alertMessage = document.getElementById('alertMessage');
+         alertMessage.classList.remove('d-none');
+    }
+</script>
+{% endblock %}
